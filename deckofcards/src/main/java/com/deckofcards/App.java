@@ -28,6 +28,9 @@ public class App {
             boolean alanTemSequencia = temSequenciaDeTresConsecutivasDoMesmoNaipe(alanHand.getJSONArray("cartas"));
             boolean brunoTemSequencia = temSequenciaDeTresConsecutivasDoMesmoNaipe(brunoHand.getJSONArray("cartas"));
 
+            alanHand.put("tem_sequencia", String.valueOf(alanTemSequencia));
+            brunoHand.put("tem_sequencia", String.valueOf(brunoTemSequencia));
+
             formatarSaida(alanHand);
             formatarSaida(brunoHand);
 
