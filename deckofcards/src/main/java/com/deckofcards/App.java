@@ -161,9 +161,10 @@ public class App {
      * Retorna true ou false dependendo do resultado da comparação feita
      */
     public static boolean temSequenciaDeTresConsecutivasDoMesmoNaipe(JSONArray cartas) {
-        int contador = 0;
+        int contador;
 
         for (int i = 0; i < cartas.length(); i++) {
+            contador = 1;
             if(cartas.getJSONArray(i).length() > 1)  //Se o JSONArray for < 1, então não executa os próximos passos
                 for(int j = 1; j < cartas.getJSONArray(i).length(); j++){
                     if(Integer.parseInt(cartas.getJSONArray(i).getJSONObject(j).getString("value")) == Integer.parseInt(cartas.getJSONArray(i).getJSONObject(j - 1).getString("value")) + 1){
